@@ -1,0 +1,50 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  background: #ffffff;
+}
+
+/* LEFT */
+.hero-content {
+  flex: 1;
+}
+
+/* RIGHT */
+.hero-visual {
+  flex: 1;
+  height: 100%;
+}
+
+/* TEXT */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #000000; /* 🔥 pure black */
+}
+
+.hero-subtitle {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* GRADIENT */
+.text-gradient {
+  background: linear-gradient(120deg, #6366f1, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BUTTON */
+.btn-primary {
+  margin-top: 25px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(120deg, #6366f1, #06b6d4);
+}
