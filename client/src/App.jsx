@@ -1,10 +1,10 @@
 import "./index.css";
 import "./service/golbalColorCombinaton.css"; 
-import Hero from "./components/HeroSection";
+import Home from "../src/pages/HomePage";
 function App() {
   return (
     <>
-      <Hero />
+      <Home />
     </>
   );
 }

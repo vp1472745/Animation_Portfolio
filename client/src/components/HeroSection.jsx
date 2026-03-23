@@ -85,30 +85,31 @@ const Hero = () => {
     <section className="hero" ref={heroRef}>
 
       {/* 🌊 Background */}
-      <div
-        className="hero-bg"
-        style={{
-          transform: `translate(${mouse.x}px, ${mouse.y}px)`
-        }}
-      />
+    <div
+    className="ripple"
+    style={{
+      left: `${mouse.x * 5 + 50}%`,
+      top: `${mouse.y * 5 + 50}%`,
+    }}
+  />
 
       {/* 🧠 LEFT TEXT */}
-      <div className="hero-content">
-        <p className="hero-kicker">Digital Studio</p>
+   <div className="hero-content">
+  <p className="hero-kicker">Portfolio</p>
 
-        <h1 className="hero-title">
-          Build your brand story with
-          <span className="text-gradient"> bold digital experiences</span>
-        </h1>
+  <h1 className="hero-title">
+    Showcasing my work with
+    <span className="text-gradient"> real world MERN projects</span>
+  </h1>
 
-        <p className="hero-subtitle">
-          Creating modern, scalable and high-performance web applications.
-        </p>
+  <p className="hero-subtitle">
+    Explore my projects including rental platforms, voting systems and modern web applications.
+  </p>
 
-        <button className="btn-primary">
-          Let’s Talk 🚀
-        </button>
-      </div>
+  <button className="btn-primary">
+    View Projects 🚀
+  </button>
+</div>
 
       {/* 🎮 RIGHT 3D */}
       <div className="hero-visual">

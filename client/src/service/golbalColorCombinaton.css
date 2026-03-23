@@ -1,3 +1,136 @@
+/* ------------------------golbal body css------------------------ */
+
+body {
+  overflow-y: scroll; /* scroll allow rahe */
+   background: #ffffff;
+}
+
+/* hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+
+
+/* ------------------------------------------------navbar css------------------------ */ 
+
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+/* LOGO */
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ICON */
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: #e5e7eb;
+}
+
+/* BUTTON BASE */
+.nav-btn {
+  padding: 10px 18px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* DARK */
+.nav-btn.dark {
+  background: #111827;
+  color: white;
+}
+
+/* LIGHT */
+.nav-btn.light {
+  background: #e5e7eb;
+  color: #111;
+}
+
+/* DOT */
+.dot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* DOTS */
+.dots {
+  font-size: 12px;
+}
+
+/* DROPDOWN */
+.menu-wrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  border-radius: 12px;
+  padding: 10px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  min-width: 160px;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #111;
+  transition: 0.2s;
+}
+
+.dropdown a:hover {
+  background: #f3f4f6;
+}
+
+
+
+
+
+/* ----------------------------------------hero section css------------------------ */
+
+
 .hero {
   height: 100vh;
   display: flex;
@@ -5,6 +138,9 @@
   justify-content: space-between;
   padding: 0 8%;
   background: #ffffff;
+  /* position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #f8fafc, #eef2ff); 🔥 subtle bg */
 }
 
 /* LEFT */
@@ -47,4 +183,280 @@
   color: white;
   font-weight: 600;
   background: linear-gradient(120deg, #6366f1, #06b6d4);
+}
+
+
+
+/* -----------------------------scroll bar and contain section css------------------------ */ 
+
+
+/* 🔵 SCROLL WRAPPER (centered small line) */
+.scroll-wrapper {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 150px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 9999;
+}
+
+/* 🔵 PROGRESS BAR */
+.scroll-progress {
+  width: 100%;
+  height: 0%;
+  border-radius: 10px;
+
+  background: linear-gradient(to bottom, #6366f1, #06b6d4);
+
+
+
+
+}
+
+
+
+
+
+/* SECTION */
+.scroll-section {
+  position: relative;
+  padding: 120px 8%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* 🔵 BACKGROUND MOVING LINE */
+.bg-line {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+
+  width: 500px;
+  height: 500px;
+
+  background: linear-gradient(120deg, #6366f1, #06b6d4);
+  opacity: 0.15;
+
+  filter: blur(120px);
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+/* TEXT ABOVE */
+.scroll-section h2,
+.cards {
+  position: relative;
+  z-index: 2;
+}
+/* SECTION */
+.scroll-section {
+  padding: 120px 8%;
+}
+
+/* GRID */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+.project-card {
+  display: block;
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* 🔥 important fix */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------About Section -----------------------------*/
+/* About Section */
+.about-section {
+  position: relative;
+  padding: 120px 0;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Background blob */
+.blob-bg {
+  position: absolute;
+  top: 20%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, rgba(99, 102, 241, 0) 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Title */
+.about-title {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 64px;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.about-title span {
+  color: #6366f1;
+  display: inline-block;
+}
+
+.title-underline {
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, transparent);
+  border-radius: 2px;
+}
+
+/* Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 56px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+
+/* Text Content */
+.about-text p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.7;
+  opacity: 0; /* hidden until animation */
+  transform: translateY(60px);
+}
+
+/* Experience Card */
+.about-card {
+  background: #f9fafb;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1f2937;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-card li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #4b5563;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Skills */
+.skills {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  padding: 8px 18px;
+  background: #f3f4f6;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  transition: all 0.2s ease;
+  cursor: default;
+  opacity: 0; /* hidden until animation */
+  transform: translateY(40px);
+}
+
+.skills span:hover {
+  background: #e5e7eb;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 0;
+  }
+
+  .about-title {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-card {
+    padding: 24px;
+  }
+
+  .blob-bg {
+    width: 250px;
+    height: 250px;
+    right: -20%;
+    top: 40%;
+  }
 }
